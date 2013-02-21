@@ -1,0 +1,17 @@
+function [ g ] = box_filter( f, MN, v )
+%G Summary of this function goes here
+%   Detailed explanation goes here
+
+
+%Add Gaussian Noise to image
+%img = imnoise(f,'gaussian', 0, v);
+
+
+%Perform MxN Filtering
+filter = fspecial('average',MN);
+fimg = imfilter(f, filter, 'replicate');
+
+
+g = fimg;
+
+end

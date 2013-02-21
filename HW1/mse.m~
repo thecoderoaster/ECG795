@@ -1,0 +1,27 @@
+function [ e ] = mse(f1,f2)
+%E Mean Squared Error
+%   Detailed explanation goes here
+
+ROWS = size(f1,1);
+COLS = size(f1,2);
+out_sum = 0;
+in_sum = 0;
+
+% for row = 1:ROWS
+%     in_sum = 0;
+%     for cols = 1:COLS
+%         in_sum = int32(in_sum) + (int32(f1(row,cols,1)) - int32(f2(row,cols,1)))^2;
+%     end
+%     out_sum = out_sum + in_sum;
+% end
+% 
+% e = (out_sum/(ROWS * COLS));
+
+img1 = double(f1);
+img2 = double(f2);
+
+[M N] = size(img1);
+error = img1 - img2;
+MSE = sum(sum(
+
+end
