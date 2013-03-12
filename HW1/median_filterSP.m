@@ -1,5 +1,5 @@
 function [ g ] = median_filterSP( f, MN, d )
-%UNTITLED9 Summary of this function goes here
+%G Summary of this function goes here
 %   Detailed explanation goes here
 
 %Add Gaussian Noise to image
