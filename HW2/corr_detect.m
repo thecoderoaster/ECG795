@@ -10,7 +10,7 @@ list = zeros(size(g,1), size(g,2));
 for row=1:size(g,1)
     for col=1:size(g,2)
         if(g(row,col) > threshold)
-            list(row, col) = g(row,col);
+            list(row, col) = g(row,col);  
         end
     end
 end
