@@ -16,13 +16,13 @@ angle = zeros(ROWS,COLS);
 [Ix Iy] = imgrad(f);
 Ix2 = Ix .* Ix;
 Iy2 = Iy .* Iy;
-IxIy = Ix .* Iy;
+IxIy = Ix;
 
 % Step 3: Filter gradients with weight
 w = [1 1 1; 1 1 1; 1 1 1];
-a = double(imfilter(Ix2, w));
-b = double(imfilter(IxIy,w));
-c = double(imfilter(Iy2, w));
+a = double(imfilter(Ix2, 3));
+b = double(imfilter(IxIy,3));
+c = double(imfilter(Iy2, 3));
 
 % Step 4: Compute Autocorrelation Matrix and Lambdas (eig)
 for i=1:ROWS

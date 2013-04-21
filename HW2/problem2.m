@@ -6,9 +6,7 @@ function [ f ] = problem2( image )
 ret = corner_detector(image);
 
 %Plot keypoints
-
-%[x_p,y_p] = find(ret);
-imshow(image);         %# Display your image
+imshow(image);      %# Display your image
 hold on;            %# Add subsequent plots to the image
 
 for i=1:size(ret,1)
